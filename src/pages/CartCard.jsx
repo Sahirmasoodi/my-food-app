@@ -12,7 +12,7 @@ const CartItem = ({data}) => {
   return (
     <>
      {data.map((item) => (
-       <div key={item?.card?.info?.id}  className="py-2 my-2 border-b-2 border-gray-100 flex justify-between">
+       <div key={item?.card?.info?.id}  className="w-1/5 min-w-80 flex gap-3 bg-gray-300 p-5 rounded-md ">
             <div  className=" text-left">
                 <div > {item?.card?.info?.name}</div>
                 <div className="mb-2">₹ {item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100}</div>
@@ -22,10 +22,10 @@ const CartItem = ({data}) => {
                     <span className="ps-1 text-black">({item?.card?.info?.ratings?.aggregatedRating?.ratingCountV2 || 19})</span>
                 </div>
             </div> 
-            <div className="size-16">
-                <img className=" w-16 h-full rounded-lg"
+            <div className="size-20">
+                <img className=" w-20  rounded-lg"
                     src={ IMAGE_URL + item?.card?.info?.imageId}/>
-             <button onClick={()=>removeItemFromCart(item?.card?.info?.name)} className="relative -top-4 left-5  px-2 bg-white rounded-lg shadow-md border border-gray-100 text-green-500 font-bold">-</button>
+             <button onClick={()=>removeItemFromCart(item?.card?.info?.name)} className="relative -top-4 left-5  px-4 bg-white rounded-lg shadow-md border border-gray-100 text-red-500 font-bold">-</button>
                     
             </div>
         </div> 

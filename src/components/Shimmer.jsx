@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Shimmer = () => {
     let arr = [1,1,1,1,1,1,1,1]

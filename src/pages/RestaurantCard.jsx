@@ -13,12 +13,13 @@ const RestaurantCard = ({restaurant}) => {
         <div className="mt-5 ps-2">
           <h1 className=" font-bold text-wrap">{name.toUpperCase()}</h1>
           <div className="flex items-center">
-            <img className="size-5" src="images/star.webp" />
+            <p className='text-green-600 text-lg'>★</p>
             <span>{avgRatingString}</span>
             <span className="ps-4">{sla?.slaString} </span>
           </div>
         </div>
         <p className="mt-1 ps-2 opacity-50">{areaName}</p>
+      
       </div>
     </div>
   );
